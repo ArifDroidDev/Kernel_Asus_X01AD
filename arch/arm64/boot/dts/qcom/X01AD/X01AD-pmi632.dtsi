@@ -96,8 +96,9 @@
 };
 
 &soc {
+	/delete-node/ qcom,camera-flash;
 
-	led_flash0: qcom,camera-flash {
+	led_flash0: qcom,camera-flash@0 {
 		cell-index = <0>;
 		compatible = "qcom,camera-flash";
 		qcom,flash-type = <1>;
@@ -107,7 +108,7 @@
 		status = "ok";
 	};
 
-	led_flash1: qcom,camera-flash {
+	led_flash1: qcom,camera-flash@1 {
 		cell-index = <1>;
 		compatible = "qcom,camera-subflash";
 		qcom,flash-type = <1>;
